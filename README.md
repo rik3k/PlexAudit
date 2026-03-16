@@ -3,6 +3,12 @@
 A Python tool that cross-references your Plex Media Server database against your actual media files on disk, then generates a self-contained interactive HTML report. Instantly see what Plex has matched, what it scanned but couldn't identify, what files have gone missing, and — critically — what's sitting on your drives that Plex has never touched.
 
 ![image](https://i.imgur.com/WyjEfOm.png)
+---
+<h4>Support the project</h4>
+<sub>
+If you found this tool useful, please consider supporting my BandCamp projects:<br>
+<a href="https://ferropop.bandcamp.com">ferropop.bandcamp.com</a> [name your price!]
+</sub>
 
 ---
 
