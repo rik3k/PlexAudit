@@ -978,7 +978,7 @@ function mCell(r, field) {{
 
 // Column definitions
 // fnCell: filename cell with right-click context menu
-const fnCell = (r,w) => `<td class="p" title="${{xe(r.full_path)}}" oncontextmenu="showCtx(event,'${{xe(r.full_path)}}')" style="cursor:context-menu">${{xe(r.filename)}}</td>`;
+const fnCell = (r,w) => `<td class="p" title="${{xe(r.full_path)}}" data-full-path="${{xe(r.full_path)}}" oncontextmenu="showCtx(event, this.dataset.fullPath); return false;" style="cursor:context-menu">${{xe(r.filename)}}</td>`;
 
 const COLS = {{
   tv:[
@@ -1357,7 +1357,12 @@ function setFilterBar(busy) {{
 }}
 
 function xe(s){{
-  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(s||'')
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
 }}
 
 function resetFilters(){{
